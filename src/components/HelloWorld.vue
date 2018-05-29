@@ -20,6 +20,7 @@
                             keywords:val.keywords
                         }
                 }"
+
           class="newsDetaile"
           :key="index"
         >
