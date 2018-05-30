@@ -20,7 +20,6 @@ export default {
         for (var j = 0; j < response.data.data.length; j++) {
           images.push(response.data.data[j].imageUrl)
         }
-        console.log(images)
       })
       .catch(function (response) {
         console.log(response)
@@ -58,6 +57,7 @@ export default {
     transition-timing-function:linear !important;
   }
   .swiper-slide {
+
     background-position: center;
     background-size: cover;
     width: 100%;
