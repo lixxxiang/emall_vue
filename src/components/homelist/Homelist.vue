@@ -65,6 +65,7 @@ export default {
       axios.post('http://202.111.178.10:28085/mobile/homePage', params)
         .then(function (response) {
           self.message = response.data.data.MixedContentList
+          self.contentId = self.message.contentId
           console.log(self.message)
         })
         .catch(function (response) {
@@ -75,7 +76,13 @@ export default {
   methods: {
     toImageDetail (contentId) {
       console.log(contentId)
-      this.$router.push('../detail/imageDetail')
+      // this.$router.push('../detail/imageDetail')
+      this.$router.push({
+        name: 'imageDetail',
+        params: {
+          id: contentId
+        }
+      })
     }
   }
 }
